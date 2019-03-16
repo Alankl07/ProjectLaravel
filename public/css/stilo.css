@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/* Tela Cadastro de Funcionário*/
+body#cadastro{
+    background-image: url("../img/castelocadastro.jpg");
+    background-size: 100%;
+    
+}
+
+.margem{
+    margin-top: 10px;
+    position: relative;
+    left: 420px;
+    top: 150px;
+    color: coral;
+}
+
+.margemb{
+    margin: 10px;
+    margin-left: 350px;
+}
+
+.margemf{
+    margin-right: 110px;
+    top: 5px;
+    background-color: black rgba(0, 0, 0, .8);                                                                                                                                    
+    color: coral;
+}
+
+/*Tela Departamento*/
+
+body#departamento{
+    background-image: url("../img/castelodepartamento.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+div#interfacedepartamento{
+    position: relative;
+    top:300px;
+    color: coral;
+    left: 860px;
+}
+
+.butaodepartamento{
+    position: relative;
+    margin: 10px;
+    left:338px;
+}
+
+
+/*Tela sala*/
+.interfacesala{
+    position: relative;
+    top: 300px;
+    color: coral;
+    left: 860px;
+}
+
+button#sala{
+    position: relative;
+    left: 318px;
+    margin: 20px;
+    border-color: coral;
+    color: coral;
+}
+
+body#telasala{
+    background-image: url('../img/castelodepartamento.jpg'); 
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+
+/* Menu tela inicial */
+
+body#telainicial{
+    background-image: url("../img/telainicial.jpg");
+    background-size: 100%;
+}
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0px;
+    left: 600px;
+}
+
+nav#menu li{
+	display: inline-block;
+	background-color: coral rgba(0, 0, 0, .8);
+	padding: 10px;
+	margin: 2px;
+	transition: background-colo 1s;
+}
+
+nav#menu a{
+	color:coral;
+	text-decoration: none;
+}
+
+nav#menu a:hover{
+	color: coral;
+	text-decoration: underline;
+}
+
+nav#menu h1{
+    color: coral;
+}
+
+div#textoinicial{
+    top:100px;
+    font-size: 20pt;
+    padding: 10px;
+    text-align: justify;
+    text-indent: 20px;
+    color: coral;
+}
+
+/*TELA LOGIN*/
+
+.login{
+    background-image: url('../img/login1.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    overflow: hidden;
+    
+}
+
+.login2{
+    background-color: rgba(0, 0, 0,.0);
+    position: absolute;
+    
+    padding: 10px;
+    left: 100px;
+    color: coral;
+    font-size: 16pt;
+    font-weight: bold;
+}
