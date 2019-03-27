@@ -12,10 +12,12 @@
 </head>
 <body class="login">
     <div class="login2">
-    <label for="login">login</label>
-    <input class="form-control" type="text" id="login" size=30>
+    <label for="login">Login</label>
+    <input class="form-control" type="text" id="login" size=40>
     <label for="senha">Senha</label>
-    <input class="form-control" type="password" id="senha" size=30>
+    <input class="form-control" type="password" id="senha" size=40>
+    <h4 class="as">Esqueceu sua senha?</h4>
+    <button id="bt" class="btn btn-outline-light" size="20">Entrar</button>
     </div>
 </body>
 </html>

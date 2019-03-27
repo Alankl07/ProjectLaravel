@@ -131,10 +131,23 @@ div#textoinicial{
 .login2{
     background-color: rgba(0, 0, 0,.0);
     position: absolute;
-    
+    margin-top: 260px;
     padding: 10px;
-    left: 100px;
+    left: 510px;
     color: coral;
     font-size: 16pt;
     font-weight: bold;
 }
+
+#bt{
+    position: absolute;
+    margin-top: 40px;
+    left:260px;
+    size: 60px;
+}
+ .as{
+    position: absolute;
+    top:170px;
+    color:coral;
+    font-size: 12pt;
+ }
