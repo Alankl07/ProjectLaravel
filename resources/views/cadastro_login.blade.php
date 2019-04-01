@@ -9,15 +9,19 @@
     <link href="{{asset('css/stilo.css')}}" rel="stylesheet">
     <link href="{{asset('css/margem.css')}}" rel="stylesheet">
 </head>
-<body id="cadastro">
+<body id="cadastrologin">
     
         <div class = "row">
             <div class = "col-md-4"></div>
             <div class = "col-md-4">
-            <form action="{{route('funcionario.store')}}" method="POST">   
+            <form action= "{{route('cadastro.store')}}" method="POST">   
                 @csrf    
-                <div class="margem">
-                    <h1 >Cadastro de Funcionários</h1>
+                <div class="marge">
+                    <h1 >Cadastro Login</h1>
+                    <fieldset id="herarquia"><legend> Hierarquia</legend>
+                        <input type="radio" name="herarquia" values="ministro" id="therarquia"><label for="hera"> Ministro(a)</label><br/>
+                        <input type="radio" name="herarquia" values="coordenador" id="fherarquia"><label for="her"> Coordenador(a)</label>
+                     </fieldset>
                     <label for="nome">Nome</label>
                     <input class="form-control" type="text" id="nome" name="nome" size=30
                     placeholder="Digite seu nome aqui!">

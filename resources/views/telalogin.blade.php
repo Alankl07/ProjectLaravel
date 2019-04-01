@@ -16,7 +16,8 @@
     <input class="form-control" type="text" id="login" size=40>
     <label for="senha">Senha</label>
     <input class="form-control" type="password" id="senha" size=40>
-    <h4 class="as">Esqueceu sua senha?</h4>
+    <a href="recuperar" class="as">Esqueceu sua senha?</a>
+    <a href="{{route('cadastro.create')}}" class="as1">Cadastrar-se</a>
     <button id="bt" class="btn btn-outline-light" size="20">Entrar</button>
     </div>
 </body>

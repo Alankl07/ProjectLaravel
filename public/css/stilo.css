@@ -1,5 +1,39 @@
 @charset "UTF-8";
 
+/* Tela Cadastro de login*/
+body#cadastrologin{
+    background-image: url("../img/castelocadastro.jpg");
+    background-size: 100%;
+    
+}
+
+/* Tela recuperar senha*/
+
+div#rl{
+    position: relative;
+    display: blok;
+    float: left;
+    left: 450px;
+	color: #000000;
+	font-size: 8pt;
+	margin-top: 250px;
+}
+
+
+body#r{
+    background-image: url("../img/castelocadastro.jpg");
+}
+
+
+.marge{
+    margin-top: 10px;
+    position: relative;
+    left: -450px;
+    top: 50px;
+    color: coral;
+}
+
+
 /* Tela Cadastro de Funcionário*/
 body#cadastro{
     background-image: url("../img/castelocadastro.jpg");
@@ -148,6 +182,13 @@ div#textoinicial{
  .as{
     position: absolute;
     top:170px;
+    color:coral;
+    font-size: 12pt;
+ }
+
+ .as1{
+    position: absolute;
+    top:200px;
     color:coral;
     font-size: 12pt;
  }
