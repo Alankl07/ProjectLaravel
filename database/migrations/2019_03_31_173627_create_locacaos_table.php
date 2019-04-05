@@ -15,6 +15,9 @@ class CreateLocacaosTable extends Migration
     {
         Schema::create('locacaos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nome funcionario');
+            $table->integer('numero da sala');
+            $table->string('cordenador');
             $table->timestamps();
         });
     }

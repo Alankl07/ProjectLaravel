@@ -1,46 +1,29 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('telalogin');
 });
 
-Route::get('/inicial', function(){
-    return view('inicial');
-});
-
+/* Rotas de funcionários */
 Route::get('/listaFuncionarios', "FuncionarioController@index");
 Route::post('/cadastro', "FuncionarioController@store");
 Route::get('/cadastrar', "FuncionarioController@create");
+Route::resource('funcionario', 'FuncionarioController');
+
+/*Rotas dos cadastros para login */
+
 Route::get('/cadastrar', "CadastroController@create");
 Route::post('/cadastror', "CadastroController@store");
 Route::post('/cadastro/login', "CadastroController@store");
 Route::get('/funcionario', "CadastroController@index")->name('funcionario.index');
-Route::resource('funcionario', 'FuncionarioController');
 Route::resource('cadastro', 'CadastroController');
-Route::get('/cadastrol', function(){
-    return view('cadastro_login');
-});
-Route::get('/recuperar', function(){
-    return view('recuperar_senha');
-});
 
-Route::get('/cadastro/cadastrar', function(){
-    return view('cadastro_login');
-});
+/*Rotas das salas */
+Route::get('/sala', "SalaController@create");
+Route::resource('sala', 'SalaController');
 
-Route::get('/departamento', function(){
-    return view('telacadastrardepartamento');
-});
+/*Rotas dos ministérios */
+Route::get('/departamento', 'DepartamentoController@create');
+Route::resource('departamento', 'DepartamentoController');
 
-Route::get('/sala', function(){
-    return view('telacadastrosala');
-});
-
-Route::get('/inicio', function(){
-    return view('telainicial');
-});
-
-Route::get('/login', function(){
-    return view('telalogin');
-});
 

@@ -24,7 +24,7 @@ class SalaController extends Controller
      */
     public function create()
     {
-        //
+        return view('telacadastrosala');
     }
 
     /**
