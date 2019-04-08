@@ -12,16 +12,16 @@
 </head>
 <body id="departamento">
         <div class = "col-md-4">
-            <form>
+            <form action="{{route('departamento.store')}}" method="POST">
                 <div id="interfacedepartamento">
                     <h1>Cadastrar Departamento</h1>
                     <label for="nome">Nome do Departamento</label>
-                    <input class="form-control" type="text" id="nome" size=30 >
+                    <input name="nome" class="form-control" type="text" id="nome" size=30 >
                     <label for="cordenador"> Nome do Cordenador</label>
-                    <input  class="form-control" type="text" id="cordenador" size=30>
+                    <input name="cordenador" class="form-control" type="text" id="cordenador" size=30>
                     <label for="sala">Sala de Funcionamento</label>
-                    <input  class="form-control" type="text" id="sala" size=30>
-                    <button id="sala" class="btn btn-outline-light" type="button">Cadastrar</button>
+                    <input name="sala" class="form-control" type="numeric" id="sala" size=10>
+                    <button id="sala" class="btn btn-outline-light" type="submit">Cadastrar</button>
                 </div>
             </form>
         </div>

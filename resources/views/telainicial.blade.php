@@ -14,10 +14,9 @@
     <nav id="menu" >
         <h1>Sejam bem-vindo seus Bruxos</h1>
         <ul>
-            <li><a href="inicio">Inicio</a></li>
-            <li><a href="cadastrar">Cadastrar Funcionário</a></li>
-            <li><a href="departamento">Cadastrar Departamento</a></li>
-            <li><a href="sala">Cadastra Sala</a></li>
+            <li><a href="{{route('funcionario.create')}}">Cadastrar Funcionário</a></li>
+            <li><a href="{{route('departamento.create')}}">Cadastrar Departamento</a></li>
+            <li><a href="{{route('sala.create')}}">Cadastra Sala</a></li>
         </ul>
     </nav>
     <div id="textoinicial" class="col-md-4">

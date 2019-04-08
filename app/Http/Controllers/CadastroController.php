@@ -25,7 +25,7 @@ class CadastroController extends Controller
      */
     public function create()
     {
-        return view('cadastro_login');
+        return view('telainicial');
     }
 
     /**

@@ -14,7 +14,8 @@ class DepartamentoController extends Controller
      */
     public function index()
     {
-        //
+        $dep = Departamento::all();
+        return view('lista_departamento', compact('departamentos'));
     }
 
     /**
@@ -35,7 +36,13 @@ class DepartamentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dep = new Departamento();
+        $dep->nome = $request->input("nome");
+        $dep->coordenador = $request->input("coordenado");
+        $path = $request->file("sala")->store('images', 'public');
+        $dep->foto = $path;    
+        $dep->save();
+        return redrect()->route('departamento.index');
     }
 
     /**

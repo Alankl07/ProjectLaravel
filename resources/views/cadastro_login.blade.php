@@ -18,10 +18,12 @@
                 @csrf    
                 <div class="marge">
                     <h1 >Cadastro Login</h1>
-                    <fieldset id="herarquia"><legend> Hierarquia</legend>
-                        <input type="radio" name="herarquia" values="ministro" id="therarquia"><label for="hera"> Ministro(a)</label><br/>
-                        <input type="radio" name="herarquia" values="coordenador" id="fherarquia"><label for="her"> Coordenador(a)</label>
-                     </fieldset>
+                    Hierarquia<br>
+                    <select name="herarquia"> 
+                        <option  name="herarquia" values="ministro" id="therarquia"><label for="hera"> -------</label><br/>
+                        <option  name="herarquia" values="ministro" id="therarquia"><label for="hera"> Ministro(a)</label><br/>
+                        <option  name="herarquia" values="coordenador" id="fherarquia"><label for="her"> Coordenador(a)</label>
+                     </select><br>
                     <label for="nome">Nome</label>
                     <input class="form-control" type="text" id="nome" name="nome" size=30
                     placeholder="Digite seu nome aqui!">
