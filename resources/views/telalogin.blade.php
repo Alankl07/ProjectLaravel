@@ -11,16 +11,16 @@
     <script src="main.js"></script>
 </head>
 <body class="login">
-    <div class="login2">
-        <form action="{{route('cadastro.create')}}" method="getS">
-            <label for="login">Login</label>
-            <input class="form-control" type="text" id="login" size=40>
-            <label for="senha">Senha</label>
-            <input class="form-control" type="password" id="senha" size=40>
-            <a href="recuperar" class="as">Esqueceu sua senha?</a>
-            <a href="cadastro_login" class="as1">Cadastrar-se</a>
-            <button id="bt" class="btn btn-outline-light" typy="submit" size="20">Entrar</button>
-        </form>
+    <form action="{{route('cadastro.create')}}" method="GET">
+        <div class="login2">
+        <label for="login">Login</label>
+        <input class="form-control" type="text" id="login" size=40>
+        <label for="senha">Senha</label>
+        <input class="form-control" type="password" id="senha" size=40>
+        <a href="recuperar" class="as">Esqueceu sua senha?</a>
+        <a href="{{route('cadastro.create')}}" class="as1">Cadastrar-se</a>
+        <button id="bt" class="btn btn-outline-light" size="20">Entrar</button>
+    </form>
     </div>
 </body>
 </html>

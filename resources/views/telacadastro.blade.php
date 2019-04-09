@@ -14,7 +14,7 @@
         <div class = "row">
             <div class = "col-md-4"></div>
             <div class = "col-md-4">
-            <form action="{{route('funcionario.store')}}" method="POST">   
+            <form action="{{route('funcionario.store')}}" method="POST" enctype="multipart/form-data">   
                 @csrf    
                 <div class="margem">
                     <h1 >Cadastro de Funcionários</h1>
@@ -28,7 +28,7 @@
                     <label for="rub">RUB</label>
                     <input class="form-control" type="text" id="rub" name="rub" size=30>
                     <label for="foto">Foto: </label>
-                    <input class = "margemf" type="file" id="foto" name="foto" size=30>
+                    <input class = "form-control-file" type="file" id="foto" name="foto" size=30>
                     <button id="sala" class="btn btn-outline-light" type="submit">Cadastrar</button>
                 </div>
             </form>

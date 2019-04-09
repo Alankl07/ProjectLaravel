@@ -42,7 +42,8 @@ class CadastroController extends Controller
         $cadastro->sexo = $request->input('sexo');
         $cadastro->endereco = $request->input('endereco');
         $cadastro->rub = $request->input('rub');
-        $cadastro->foto = $request->input('foto');
+        $path=$request->file('foto')->store('imagens', 'public');
+        $cadastro->foto = $path;
         $cadastro->save();
         return redirect()->route('cadastro.index');
     }

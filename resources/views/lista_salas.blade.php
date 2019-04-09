@@ -13,16 +13,15 @@
   <thead>
     <tr>
       <th scope="col">Nome</th>
-      <th scope="col">Cooredenado</th>
       <th scope="col">Sala de Funcionamento</th>
+    </tr>
   </thead>
   <tbody>
-    @foreach($departametnos as $dep)
+    @foreach($sala as $sal)
         <tr>
-            <td>{{$dep->nome}}</td>
-            <td>{{$dep->coordenador}}</td>
-            <td>{{$dep->saladefuncionamento}}</td>
-            <td>
+            <td>{{$sal->nome}}</td>
+            <td>{{$sal->numero_da_sala}}</td>
+            <td>  
               <form>
                 <a class = "btn btn-success">Editar</a>
                 <a class = "btn btn-danger">Excluir</a>

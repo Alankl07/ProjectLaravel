@@ -13,15 +13,14 @@
 <body id="telasala">
 <h1 class="interfacesala">Cadastro da Sala do Ministério</h1>
     <div class="col-md-4">
-        <form>
+        <form action="{{route('sala.store')}}" method="POST">
+            @csrf 
             <div class="interfacesala">
                 <label for="nome">Nome do Ministério</label>
-                <input class="form-control" type="text" id="nome" size=30>
-                <label for="cordenador">Cordenador do Ministério</label>
-                <input class="form-control" type="text" id="cordenador" size=30> 
+                <input name="nome" class="form-control" type="text" id="nome" size=30>
                 <label for="salafuncionamento">Sala de Funcionamento</label>
-                <input class="form-control" type="text" id="salafuncionamento" size=30>  
-                <button id="sala" type="button" class="btn btn-outline-light">Cadastrar</button>  
+                <input name="sala" class="form-control" type="text" id="salafuncionamento" size=30>  
+                <button id="sala" type="submit" class="btn btn-outline-light">Cadastrar</button>  
             </div>
         </form>
     <div>

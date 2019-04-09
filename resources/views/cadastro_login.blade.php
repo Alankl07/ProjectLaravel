@@ -14,15 +14,14 @@
         <div class = "row">
             <div class = "col-md-4"></div>
             <div class = "col-md-4">
-            <form action= "{{route('cadastro.store')}}" method="POST">   
+            <form action= "{{route('cadastro.store')}}" method="POST" enctype="multipart/form-data">   
                 @csrf    
                 <div class="marge">
                     <h1 >Cadastro Login</h1>
                     Hierarquia<br>
-                    <select name="herarquia"> 
-                        <option  name="herarquia" values="ministro" id="therarquia"><label for="hera"> -------</label><br/>
-                        <option  name="herarquia" values="ministro" id="therarquia"><label for="hera"> Ministro(a)</label><br/>
-                        <option  name="herarquia" values="coordenador" id="fherarquia"><label for="her"> Coordenador(a)</label>
+                    <select name="herarquia"><legend>
+                        <option name="herarquia" values="ministro" id="therarquia"><label for="hera"> Ministro(a)</label><br/>
+                        <option name="herarquia" values="coordenador" id="fherarquia"><label for="her"> Coordenador(a)</label>
                      </select><br>
                     <label for="nome">Nome</label>
                     <input class="form-control" type="text" id="nome" name="nome" size=30
@@ -34,7 +33,7 @@
                     <label for="rub">RUB</label>
                     <input class="form-control" type="text" id="rub" name="rub" size=30>
                     <label for="foto">Foto: </label>
-                    <input class = "margemf" type="file" id="foto" name="foto" size=30>
+                    <input class = "form-control-file" type="file" id="foto" name="foto" size=30>
                     <button id="sala" class="btn btn-outline-light" type="submit">Cadastrar</button>
                 </div>
             </form>

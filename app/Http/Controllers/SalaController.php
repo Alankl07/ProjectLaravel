@@ -14,7 +14,8 @@ class SalaController extends Controller
      */
     public function index()
     {
-        //
+        $sala = Sala::all();
+        return view('lista_salas', compact('sala'));
     }
 
     /**
@@ -35,7 +36,12 @@ class SalaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sala = new Sala();
+        $sala->nome = $request->input("nome");
+        $sala->numero_da_sala = $request->input("sala");
+        $sala->save();
+        return redirect()->route('sala.index');
+
     }
 
     /**

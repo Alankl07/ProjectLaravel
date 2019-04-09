@@ -41,7 +41,8 @@ class FuncionarioController extends Controller
         $funcionarios->sexo = $request->input("sexo");
         $funcionarios->endereco = $request->input("endereco");
         $funcionarios->rub = $request->input("rub");
-        $funcionarios->foto = $request->input("foto");
+        $path=$request->file("foto")->store('imagens', 'public');
+        $funcionarios->foto = $path;
         $funcionarios->save();
         return redirect()->route('funcionario.index');
     }

@@ -15,15 +15,19 @@ Route::resource('funcionario', 'FuncionarioController');
 Route::get('/cadastrar', "CadastroController@create");
 Route::post('/cadastror', "CadastroController@store");
 Route::post('/cadastro/login', "CadastroController@store");
-Route::get('/funcionario', "CadastroController@index")->name('funcionario.index');
+Route::get('/cadastro', "CadastroController@index")->name('funcionario.index');
 Route::resource('cadastro', 'CadastroController');
 
 /*Rotas das salas */
+Route::get('/listasala', "SalaController@index");
 Route::get('/sala', "SalaController@create");
+Route::post('/sala', "SalaController@store");
 Route::resource('sala', 'SalaController');
 
 /*Rotas dos ministérios */
 Route::get('/departamento', 'DepartamentoController@create');
+Route::get('/listadepartamento', 'DepartamentoController@index');
+Route::post('/departamento', 'DepartamentoController@store');
 Route::resource('departamento', 'DepartamentoController');
 
 

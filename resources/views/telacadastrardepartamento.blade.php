@@ -16,11 +16,11 @@
                 <div id="interfacedepartamento">
                     <h1>Cadastrar Departamento</h1>
                     <label for="nome">Nome do Departamento</label>
-                    <input name="nome" class="form-control" type="text" id="nome" size=30 >
+                    <input class="form-control" type="text" id="nome" size=30 >
                     <label for="cordenador"> Nome do Cordenador</label>
-                    <input name="cordenador" class="form-control" type="text" id="cordenador" size=30>
+                    <input  class="form-control" type="text" id="cordenador" size=30>
                     <label for="sala">Sala de Funcionamento</label>
-                    <input name="sala" class="form-control" type="numeric" id="sala" size=10>
+                    <input  class="form-control" type="text" id="sala" size=30>
                     <button id="sala" class="btn btn-outline-light" type="submit">Cadastrar</button>
                 </div>
             </form>

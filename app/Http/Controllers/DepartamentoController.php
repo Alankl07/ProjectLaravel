@@ -37,12 +37,11 @@ class DepartamentoController extends Controller
     public function store(Request $request)
     {
         $dep = new Departamento();
-        $dep->nome = $request->input("nome");
-        $dep->coordenador = $request->input("coordenado");
-        $path = $request->file("sala")->store('images', 'public');
-        $dep->foto = $path;    
+        $dep->nome = $request->input('nome');
+        $dep->coordenado = $request->input('coordenador');
+        $dep->saladefuncionamento = $request->input('sala de funcionamento');
         $dep->save();
-        return redrect()->route('departamento.index');
+        return redirect()->route('departamento.index');
     }
 
     /**
