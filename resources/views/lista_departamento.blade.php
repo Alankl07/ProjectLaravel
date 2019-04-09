@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{asset('css/stilo.css')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
 </head>
-<body>
+<body >
 <table class="table table-striped">
   <thead>
     <tr>
@@ -17,15 +18,20 @@
       <th scope="col">Sala de Funcionamento</th>
   </thead>
   <tbody>
-    @foreach($departametnos as $dep)
+    <form  action="{{route('cadastro.create')}}">
+      <button class="stil" type="submit">Pagina Inicial</button>
+    </form>
+    @foreach($dep as $de)
         <tr>
-            <td>{{$dep->nome}}</td>
-            <td>{{$dep->coordenador}}</td>
-            <td>{{$dep->saladefuncionamento}}</td>
+            <td>{{$de->nome}}</td>
+            <td>{{$de->coordenador}}</td>
+            <td>{{$de->numero_da_sala}}</td>
             <td>
-              <form>
-                <a class = "btn btn-success">Editar</a>
-                <a class = "btn btn-danger">Excluir</a>
+              <form action = "{{route('departamento.destroy', $de)}}" method = "POST">
+                @csrf
+                <a class = "btn btn-success" href="{{route('departamento.edit', $de)}}">Editar</a>
+                @method('DELETE')
+                <button type = "submit" class = "btn btn-danger">Excluir</button>
               </form>  
             </td>
         </tr>

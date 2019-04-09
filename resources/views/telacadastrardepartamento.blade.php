@@ -14,13 +14,18 @@
         <div class = "col-md-4">
             <form action="{{route('departamento.store')}}" method="POST">
                 <div id="interfacedepartamento">
+                @csrf  
                     <h1>Cadastrar Departamento</h1>
                     <label for="nome">Nome do Departamento</label>
-                    <input class="form-control" type="text" id="nome" size=30 >
-                    <label for="cordenador"> Nome do Cordenador</label>
-                    <input  class="form-control" type="text" id="cordenador" size=30>
+                    <input name="nome" class="form-control" type="text" id="nome" size=30 >
+                    <label  for="coordenador"> Nome do Cordenador</label>
+                    <input name="coordenador" class="form-control" type="text" id="coordenador" size=30>
                     <label for="sala">Sala de Funcionamento</label>
-                    <input  class="form-control" type="text" id="sala" size=30>
+                    <select class = "form-control" name = "sala" id="sala">
+                    @foreach($sala as $sa)
+                        <option value={{$sa->id}}>{{$sa->numero_da_sala}}</option>
+                    @endforeach
+                    </select>
                     <button id="sala" class="btn btn-outline-light" type="submit">Cadastrar</button>
                 </div>
             </form>

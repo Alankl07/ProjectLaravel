@@ -192,3 +192,11 @@ div#textoinicial{
     color:coral;
     font-size: 12pt;
  }
+
+ /*Tela editar departamento*/
+
+ .stil{
+    position: relative;
+    margin: 20px;
+    background-color:darkgrey;
+ }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\departamento;
+use App\sala;
 use Illuminate\Http\Request;
 
 class DepartamentoController extends Controller
@@ -15,7 +16,7 @@ class DepartamentoController extends Controller
     public function index()
     {
         $dep = Departamento::all();
-        return view('lista_departamento', compact('departamentos'));
+        return view('lista_departamento', compact('dep'));
     }
 
     /**
@@ -25,7 +26,8 @@ class DepartamentoController extends Controller
      */
     public function create()
     {
-        return view('telacadastrardepartamento');
+        $sala = Sala::all();
+        return view('telacadastrardepartamento', compact('sala'));
     }
 
     /**
@@ -38,8 +40,8 @@ class DepartamentoController extends Controller
     {
         $dep = new Departamento();
         $dep->nome = $request->input('nome');
-        $dep->coordenado = $request->input('coordenador');
-        $dep->saladefuncionamento = $request->input('sala de funcionamento');
+        $dep->coordenador = $request->input('coordenador');
+        $dep->numero_da_sala = $request->input('sala');
         $dep->save();
         return redirect()->route('departamento.index');
     }
@@ -63,7 +65,7 @@ class DepartamentoController extends Controller
      */
     public function edit(departamento $departamento)
     {
-        //
+        return view('editar_Departamento', compact('departamento'));
     }
 
     /**
@@ -75,7 +77,11 @@ class DepartamentoController extends Controller
      */
     public function update(Request $request, departamento $departamento)
     {
-        //
+        $departamento->nome = $request->input("nome");
+        $departamento->coordenador = $request->input("coordenador");
+        $departamento->numero_da_sala = $request->input("sala");
+        $departamento->save();
+        return redirect()->route('departamento.index');
     }
 
     /**
@@ -86,6 +92,7 @@ class DepartamentoController extends Controller
      */
     public function destroy(departamento $departamento)
     {
-        //
+        $departamento->delete();
+        return redirect()->route('departamento.index');
     }
 }
