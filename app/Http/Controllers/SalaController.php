@@ -63,7 +63,7 @@ class SalaController extends Controller
      */
     public function edit(Sala $sala)
     {
-        //
+        return view('editar_sala', compact('sala'));
     }
 
     /**
@@ -75,7 +75,10 @@ class SalaController extends Controller
      */
     public function update(Request $request, Sala $sala)
     {
-        //
+        $sala->nome = $request->input("nome");
+        $sala->numero_da_sala = $request->input("sala");
+        $sala->save();
+        return redirect()->route('sala.index');
     }
 
     /**
@@ -86,6 +89,7 @@ class SalaController extends Controller
      */
     public function destroy(Sala $sala)
     {
-        //
+        $sala->delete();
+        return redirect()->route('sala.index');
     }
 }

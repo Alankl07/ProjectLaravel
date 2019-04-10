@@ -14,7 +14,7 @@
         <div class = "row">
             <div class = "col-md-4"></div>
             <div class = "col-md-4">
-            <form action="{{route('funcionario.update', $funcionario)}}" method="POST">   
+            <form action="{{route('funcionario.update', $funcionario)}}" method="POST" enctype="multipart/form-data">   
                   
                 <div class="margem">
                 @csrf  

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Locacao;
+use App\Departamento;
+use App\Sala;
 use Illuminate\Http\Request;
 
 class LocacaoController extends Controller
@@ -14,7 +16,8 @@ class LocacaoController extends Controller
      */
     public function index()
     {
-        //
+        $locacao = Locacao::all();
+        return view('lista_locacao', compact('locacao'));
     }
 
     /**
@@ -23,8 +26,10 @@ class LocacaoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+        $sala = Sala::all();
+        $departamento = Departamento::all();
+        return view('telalocacao', compact('sala', 'departamento'));
     }
 
     /**
@@ -35,7 +40,12 @@ class LocacaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $locacao = new Locacao();
+        $locacao->nome_funcionario = $request->input("nome");
+        $locacao->numero_da_sala = $request->input("sala");
+        $locacao->departamento = $request->input("departamento");
+        $locacao->save();
+        return redirect()->route('locacao.index');
     }
 
     /**
@@ -57,7 +67,7 @@ class LocacaoController extends Controller
      */
     public function edit(Locacao $locacao)
     {
-        //
+        return view('editar_locacao', compact('locacao'));
     }
 
     /**
@@ -80,6 +90,7 @@ class LocacaoController extends Controller
      */
     public function destroy(Locacao $locacao)
     {
-        //
+        $locacao->delete();
+        return redirect()->route('locacao.index');
     }
 }

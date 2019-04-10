@@ -31,4 +31,10 @@ Route::get('/listadepartamento', 'DepartamentoController@index');
 Route::post('/departamento', 'DepartamentoController@store');
 Route::resource('departamento', 'DepartamentoController');
 
+/*Rotas das locações */
+
+Route::get('/locacao', "LocacaoController@create");
+Route::post('/locacao', "LocacaoController@store");
+Route::resource('locacao', "LocacaoController");
+
 

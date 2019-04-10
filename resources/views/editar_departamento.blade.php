@@ -20,7 +20,7 @@
              <input name="coordenador" class="form-control" type="text" id="coordenador" size=30>
              <label for="sala">Sala de Funcionamento</label>
              <input name="sala" class="form-control" type="text" id="sala" size=30 >
-            <button id="sala" class="btn btn-outline-light" type="submit">Cadastrar</button>
+            <button id="sala" class="btn btn-outline-light" type="submit">Editar</button>
         </div>
     </form>
 </body>

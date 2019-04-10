@@ -27,9 +27,11 @@
             <td>{{$sal->nome}}</td>
             <td>{{$sal->numero_da_sala}}</td>
             <td>  
-              <form>
-                <a class = "btn btn-success">Editar</a>
-                <a class = "btn btn-danger">Excluir</a>
+              <form action="{{route('sala.destroy', $sal)}}" method="POST">
+                @csrf
+                <a class = "btn btn-success" href="{{route('sala.edit', $sal)}}">Editar</a>
+                @method('DELETE')
+                <button type="submit" class = "btn btn-danger">Excluir</button>
               </form>  
             </td>
         </tr>
