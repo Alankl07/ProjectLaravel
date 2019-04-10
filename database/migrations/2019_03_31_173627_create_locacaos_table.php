@@ -17,7 +17,7 @@ class CreateLocacaosTable extends Migration
             $table->increments('id');
             $table->string('nome funcionario');
             $table->integer('numero da sala');
-            $table->string('cordenador');
+            $table->string('departamento');
             $table->timestamps();
         });
     }

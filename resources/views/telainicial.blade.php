@@ -13,9 +13,10 @@
 <body id="telainicial">
     <nav id="menu" >
         <h1>Sejam bem-vindo seus Bruxos</h1>
-        <ul>
+        <ul >
             <li><a href="{{route('funcionario.create')}}">Cadastrar Funcionário</a></li>
             <li><a href="{{route('departamento.create')}}">Cadastrar Departamento</a></li>
+            <li><a href="{{route('departamento.create')}}">Locar Funcionários</a></li>
             <li><a href="{{route('sala.create')}}">Cadastra Sala</a></li>
         </ul>
     </nav>

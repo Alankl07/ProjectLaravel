@@ -21,8 +21,12 @@
                     <label for="nome">Nome</label>
                     <input class="form-control" type="text" id="nome" name="nome" size=30
                     placeholder="Digite seu nome aqui!">
-                    <label for="sexo">Sexo</label>
-                    <input class="form-control" type="text" id="sexo" name="sexo" size=30>
+                    <label for="sexo">Sexo</label><br>
+                    <select name="sexo"><legend>
+                        <option class="form-control" name="sexo" values="Masculino" id="msexo"><label > -----------</label><br/>
+                        <option class="form-control" name="sexo" values="Masculino" id="msexo"><label > Masculino</label><br/>
+                        <option class="form-control" name="sexo" values="Feminino" id="fsexo"><label> Feminino</label>
+                     </select><br>
                     <label for="endereco">Endereço</label>
                     <input class="form-control" type="text" id="endereco" name="endereco" size=30>
                     <label for="rub">RUB</label>

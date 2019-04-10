@@ -108,6 +108,7 @@ body#telasala{
 
 /* Menu tela inicial */
 
+
 body#telainicial{
     background-image: url("../img/telainicial.jpg");
     background-size: 100%;
@@ -118,7 +119,7 @@ nav#menu ul{
     text-transform: uppercase;
     position: absolute;
     top: 0px;
-    left: 600px;
+    left: 510px;
 }
 
 nav#menu li{
@@ -199,4 +200,10 @@ div#textoinicial{
     position: relative;
     margin: 20px;
     background-color:darkgrey;
+ }
+
+ /*Foto das listas*/
+
+ td#foto{
+     box-sizing: 10px;
  }

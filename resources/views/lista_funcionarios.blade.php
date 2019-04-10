@@ -6,9 +6,14 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{asset('css/stilo.css')}}" rel="stylesheet">
     <script src="main.js"></script>
 </head>
 <body>
+  <form  action="{{route('cadastro.create')}}">
+      <button class="stil" type="submit">Pagina Inicial</button>
+    </form>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -20,17 +25,19 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($funcionarios as $prod)
+    @foreach($funcionarios as $fun)
         <tr>
-            <td>{{$prod->nome}}</td>
-            <td>{{$prod->sexo}}</td>
-            <td>{{$prod->endereco}}</td>
-            <td>{{$prod->rub}}</td>
-            <td><img src="../storage/{{$prod->foto}}"/></td>
+            <td>{{$fun->nome}}</td>
+            <td>{{$fun->sexo}}</td>
+            <td>{{$fun->endereco}}</td>
+            <td>{{$fun->rub}}</td>
+            <td id="foto"><img src="../storage/{{$fun->foto}}"/></td>
             <td>
-              <form>
-                <a class = "btn btn-success">Editar</a>
-                <a class = "btn btn-danger">Excluir</a>
+              <form action="{{route('funcionario.destroy', $fun)}}" method="POST">
+                @csrf
+                <a class = "btn btn-success" href="{{route('funcionario.edit', $fun)}}">Editar</a>
+                @method('DELETE')
+                <button type="submit" class = "btn btn-danger">Excluir</button>
               </form>  
             </td>
         </tr>

@@ -14,6 +14,7 @@ Route::resource('funcionario', 'FuncionarioController');
 
 Route::get('/cadastrar', "CadastroController@create");
 Route::post('/cadastror', "CadastroController@store");
+Route::get('/cadastro', "CadastroController@inicial")->name('cadastro.inicial');
 Route::post('/cadastro/login', "CadastroController@store");
 Route::get('/cadastro', "CadastroController@index")->name('funcionario.index');
 Route::resource('cadastro', 'CadastroController');

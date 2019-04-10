@@ -66,7 +66,7 @@ class FuncionarioController extends Controller
      */
     public function edit(Funcionario $funcionario)
     {
-        //
+        return view('editar_funcionario', compact('funcionario'));
     }
 
     /**
@@ -78,7 +78,14 @@ class FuncionarioController extends Controller
      */
     public function update(Request $request, Funcionario $funcionario)
     {
-        //
+        $funcionario->nome = $request->input("nome");
+        $funcionario->sexo = $request->input("sexo");
+        $funcionario->endereco = $request->input("endereco");
+        $funcionario->rub = $request->input("rub");
+        $path=$request->file("foto")->store('imagens', 'public');
+        $funcionario->foto = $path;
+        $funcionario->save();
+        return redirect()->route('funcionario.index');
     }
 
     /**
@@ -89,6 +96,8 @@ class FuncionarioController extends Controller
      */
     public function destroy(Funcionario $funcionario)
     {
-        //
+        $funcionario->delete();
+        return redirect()->route('departamento.index');
+
     }
 }
