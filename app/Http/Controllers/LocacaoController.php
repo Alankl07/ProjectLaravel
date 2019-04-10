@@ -79,7 +79,11 @@ class LocacaoController extends Controller
      */
     public function update(Request $request, Locacao $locacao)
     {
-        //
+        $locacao->nome_funcionario = $request->input("nome");
+        $locacao->numero_da_sala = $request->input("sala");
+        $locacao->departamento = $request->input("departamento");
+        $locacao->save();
+        return redirect()->route('locacao.index');
     }
 
     /**
