@@ -28,6 +28,13 @@
             bem-estar do usuário, use e abuse dessa orbra
             de arte feita por nós os bruxões da TI, aproveitem.
         </p>
+        <div class="lista">
+                 <h2 class="titu">Listas</h2>
+                <a href="{{route('funcionario.index')}}">Lista de Funcionários</a><br>
+                <a href="{{route('sala.index')}}">Lista de Salas</a><br>
+                <a href="{{route('departamento.index')}}">Lista de Departametno</a><br>
+                <a href="{{route('locacao.index')}}">Lista de Locação</a>
+        </div>
     </div>
 </body>
 </html>

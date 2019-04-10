@@ -108,6 +108,19 @@ body#telasala{
 
 /* Menu tela inicial */
 
+.titu{
+    position: relative;
+    left: 65px;
+}
+
+.lista{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: relative;
+    left:990px;
+    top: -300px;
+    color: coral;
+}
 
 body#telainicial{
     background-image: url("../img/telainicial.jpg");
